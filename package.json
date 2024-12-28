@@ -1,0 +1,57 @@
+{
+  "name": "bracket-selection",
+  "displayName": "Bracket Selection",
+  "description": "Smart bracket selection with visual cues - double-click to select content between matching brackets",
+  "version": "1.0.0",
+  "publisher": "Skyhigh",
+  "author": {
+    "name": "Skyhigh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyh24/bracket-selection"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Formatters"
+  ],
+  "keywords": [
+    "bracket",
+    "selection",
+    "double-click",
+    "visual",
+    "productivity"
+  ],
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onLanguage"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "bracket-selection.selectBracketContent",
+        "title": "Select Bracket Content"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.x.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.x.x"
+  }
+}
